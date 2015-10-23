@@ -1,0 +1,72 @@
+body {
+    background: #fff;
+	font-family: Roboto, Arial, sans-serif;
+    color: #434348;
+    font-size: 100%; 
+    margin: 0;
+}
+header {
+    background-color:#90ed7d;
+    color:#000;
+    text-align:center;
+    padding:5px; 
+}
+h2 {
+	color: #434348;
+}
+article {
+	float: right;
+	width: 35%;
+	padding: 20px 20px;
+	margin-right: 5%;
+}
+h2 {text-align:center;
+}
+#favo {
+	background: #fff;
+	height: 600px;
+	color: #000;
+	padding-top: 30px;
+	margin-bottom: -50px;
+	clear: both;
+}
+#inde {
+	background: #fff;
+	height: 600px;
+	padding-top: 30px;
+	margin-bottom: 20px;
+	clear: both;
+}
+#chart {
+	float: left;
+	width: 45%;
+	padding: 5%;
+}
+
+footer {
+    background-color:#90ed7d;
+    color:#000;
+    text-align:center;
+    padding:5px; 
+	clear: both;
+}
+
+
+a:link {
+    color: #f7a35c;
+}
+
+a:visited {
+    color: #7cb5ec;
+}
+
+a:hover {
+    color: #843e02;
+}
+
+a:active {
+    color: #2978c5;
+}
+
+
+

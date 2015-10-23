@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+
+ <head>
+
+ <meta charset="utf-8"> 
+
+ <title>Political Party Image</title>
+ 
+ <link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption|Roboto' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="styles/mainlayout.css">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"> </script>
+ 
+        <script src="js/highcharts.js"></script>
+ 
+ </head>
+ 
+ <body>
+<header>
+ <h1>Political Party Favorability</h1>
+ <p>by: Mauhe Almeida</p>
+</header>
+
+<section id="favo">
+<article>
+ <p>A national survey conducted July 2015 shows that the Republican Party’s image has grown more negative over the first half of the year. Meanwhile, the Democrats continue to hold an advantage over Republicans when it comes to public perception. Democrats are seen as more empathetic and honest while the Republicans are seen as more extreme and radical on their positions. However, neither party has an advantage on public perceptions of who would better manage the federal government, with both having the identical favorability of 40%. </p>
+
+ <p>Information from the Pew Research Center: <a href="http://www.people-press.org/2015/07/23/gops-favorability-rating-takes-a-negative-turn/">1</a>, 
+ <a href="http://www.people-press.org/2015/01/14/section-3-the-parties-and-congress-in-2015/">2</a>.
+ </article>
+ 
+<div id="chart">
+ <script>
+ $(function () {
+    $('#container').highcharts({
+        title: {
+            text: 'Democratic Party and Republican Party Favorability',
+            x: -20 //center
+        },
+        xAxis: {
+            categories: ['Sep 2012', 'Dec 2012', 'Jan 2013', 'Jun 2013', 'Jul 2013', 'Oct 2013','Dec 2013', 'Mar 2014', 'Oct 2014', 'Dec 2014', 'Jan 2015', 'Jul 2015']
+        },
+        yAxis: {
+            title: {
+                text: 'Favorability (%)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '°C'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Democrat Favorable',
+            data: [53, 48, 47, 51, 41, 77, 47, 46, 47, 41, 46, 48]
+        }, {
+            name: 'Democrat Unfavorable',
+            data: [40, 47, 46, 45, 50, 48, 48, 47, 46, 54, 48, 47]
+        }, {
+            name: 'Republican Favorable',
+            data: [42, 36, 33, 40, 33, 38, 35, 37, 38, 37, 41, 32]
+        }, {
+            name: 'Republican Unfavorable',
+            data: [50, 59, 58, 55, 58, 58, 59, 55, 54, 57, 53, 60]
+        }]
+    });
+});
+</script> 
+
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<p>Source: Pew Research Center, <a href="http://www.pewresearch.org/data-trend/political-attitudes/republican-party-favorability/">Republican Party Favorability</a> & <a href="http://www.pewresearch.org/data-trend/political-attitudes/democratic-party-favorability/">Democratic Party Favorability </a></p>
+
+ </div>
+
+ </section>
+
+ 
+ <section id="inde">
+ <h2> Independents on the Rise </h2>
+ 
+ <article> 
+ 
+ <p> While democrats still have an advantage over republicans in terms of favorability, both parties have lost ground among the public. According to a 2014 survey by Pew Research Center, 39% of Americans now label themselves as independents, outnumbering either Democrats or Republicans.</p>
+ 
+  <p>Information from the Pew Research Center: <a href="http://www.pewresearch.org/data-trend/political-attitudes/party-identification/">1</a>.
+  </article>
+   
+   <div id="chart">
+   <script>
+$(function () {
+
+    $(document).ready(function () {
+
+        // Build the chart
+        $('#container2').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: '2014 Data: Party Identification'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: "Brands",
+                colorByPoint: true,
+                data: [{
+                    name: "Independent",
+                    y: 39
+                }, {
+                    name: "Republican",
+                    y: 23
+                }, {
+                    name: "Democrat",
+                    y: 32
+                },
+                      {
+                    name: "Unknown",
+                    y: 6
+                }]
+            }]
+        });
+    });
+});
+</script>
+ 
+<div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+<p>Source: Pew Research Center, <a href="http://www.pewresearch.org/data-trend/political-attitudes/party-identification/">Party Identification</a></p>
+
+</div>
+
+</section>
+ 
+ <footer>
+ Information from the <a href="http://www.pewresearch.org/">Pew Research Center</a>.
+ </footer>
+ 
+ </body>
+
+ </html>
